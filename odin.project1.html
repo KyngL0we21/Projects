@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A dummy sign up page. Project part of The Odin Project curriculum">
+    <meta name="keywords" content="signup form, the odin project">
+    <title>Sign Up, Odin Project.</title>
+    <link rel="stylesheet" href="css/asset-style.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="Img/odin-lined.png" alt="The Odin Project logo">
+        <h1>O.P. Inc.</h1>
+      </div>
+      
+      <small><strong>
+        Photo by
+        <a href="https://unsplash.com/@haliewestphoto" target="_blank"
+          rel="noopener">Halie West</a>
+        on
+        <a href="https://unsplash.com/photos/25xggax4bSA" target="_blank"
+        rel="noopener">Unsplash</a>
+      </small></strong>
+    </header>
+
+    <main class="content">
+      <section class="intro">
+        <p>
+          Not a live website! Come sign up today! Chase your goals & achieve greatness!<br>
+          Sign up now to get started! Come join!
+        </p>
+        <p><em>Feast</em> with the gods in Valhalla!</p>
+      </section>
+      <section class="form">
+        <form novalidate id="sign-up-form">
+          <div class="container">
+            <h2>Come join us today!</h2>
+
+            <div class="fields">
+              <div class="field">
+                <label for="first-name">First name
+                  <input type="text" name="first-name" id="first-name"
+                    autocomplete="given-name" required>
+                  <strong class="error-message"></strong>
+                </label>
+              </div>
+              <div class="field">
+                <label for="last-name">Last name
+                  <input type="text" name="last-name" id="last-name" autocomplete="family-name">
+                  <strong class="error-message"></strong>
+                </label>
+              </div>
+
+              <div class="field">
+                <label for="email">Email
+                  <input type="email" name="email" id="email" required>
+                  <strong class="error-message"></strong>
+                </label>
+              </div>
+
+              <div class="field">
+                <label for="phone-number">Phone number
+                  <input type="tel" name="phone-number" id="phone-number" autocomplete="tel">
+                  <strong class="error-message"></strong>
+                </label>
+              </div>
+
+              <div class="field">
+                <label for="password">Password
+                  <input type="password" name="password" id="password" required>
+                  <strong class="message">
+                    Password must have at least 8 characters
+                  </strong>
+                  <strong class="error-message"></strong>
+                </label>
+              </div>
+
+              <div class="field">
+                <label for="password-confirm">Confirm Password
+                  <input type="password" name="password-confirm" required
+                    id="password-confirm">
+                  <strong class="error-message"></strong>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="button">Create Account</button>
+        </form>
+      </section>
+      
+      <section class="login">
+        <p>
+          Already have an account? <a href="#" class="login-link">Log in</a>
+        </p>
+      </section>
+      
+    </main>
+  </body>
+
+</html>
