@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito',sans-serif;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+  display: grid;
+}
+
+.header {
+  background-color: #f5eeee;
+  background-image: url(../Img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  color: rgb(251, 10, 10);
+  text-align: center;
+  padding: 1rem 0 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.logo {
+  align-items: center;
+  background-color: rgba(246, 7, 7, 0.4);
+  display: flex;
+  font-family: 'Nunito', sans-serif;
+  gap: 0.2rem;
+  justify-content: center;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.content {
+  background-color: #f9fafb;
+  flex-grow: 1;
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.content > * {
+  margin: 0 var(--side-padding);
+}
+
+.content .intro, .content h2 {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.content h2 {
+  padding: 2rem 0.5;
+}
+
+/* FORM */
+
+.form {
+  --error-color: #c02228;
+
+  margin: 0;
+}
+
+.form label {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.925rem;
+}
+
+.form .container {
+  background-color: rgb(254, 73, 73);
+  box-shadow: 0 5px 5px #111111;
+  padding: 0 var(--side-padding) 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.fields {
+  display: grid;
+  gap: 0.2rem 5.5rem;
+}
+
+.field label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.field input {
+  border: 1px solid #e4e6ea;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  background-color: #fffefe;
+  max-width: 25rem;
+}
+
+.field .valid {
+  border-color: rgb(238, 33, 33);
+}
+
+.field .message, .field .error-message {
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.field .error-message {
+  color: var(--error-color);
+}
+
+.field input ~ .error-message {
+  visibility: hidden;
+  min-height: 1.5rem;
+}
+
+.field input:is(.empty, .error) {
+  border-color: var(--error-color);
+}
+
+.field input:is(.error, .empty) ~ .error-message {
+  visibility: visible;
+}
+
+.field input:focus {
+  border-color: #ffffff;
+  box-shadow: 2px 2px 3px #c5c5c5;
+}
+
+.field .error-color {
+  color: var(--error-color);
+}
+
+.button {
+  margin: 0 var(--side-padding);
+  padding: 1rem 3rem;
+  background-color: var(--btn-color);
+  color: rgb(11, 11, 11);
+  border-radius: 6px;
+  box-shadow: 5px 5px 5px #242121;
+  transition: all 0.3s;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.button:hover {
+  filter: brightness(1.2);
+}
+
+.login-link {
+  color: var(--btn-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* DESKTOP STYLES */
+
+@media (min-width: 1024px) {
+  body {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  /* HEADER */
+
+  .header {
+    display: grid;
+    align-content: space-between;
+  }
+
+  .logo {
+    margin-top: 1rem;
+    align-content: flex-start;
+  }
+
+  /* MAIN CONTENT */
+
+  .content {
+    --side-padding: 3rem;
+    align-content: center;
+  }
+
+  .content .intro {
+    max-width: 42.75rem;
+    padding-bottom: 2rem;
+  }
+
+  .content .intro, .content h2 {
+    font-size: 1.4rem;
+  }
+
+  /* FORM */
+
+  .fields {
+    grid-template-columns: auto auto;
+    justify-items: left;
+    justify-content: left;
+  }
+
+  .field input {
+    width: clamp(15rem, 20vw, 20rem);
+  }
+
+  .button {
+    font-size: 1.2rem;
+  }
+}
